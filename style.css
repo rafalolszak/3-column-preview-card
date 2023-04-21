@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+html{
+    font-size: 15px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentLight:hsla(0, 0%, 100%, 0.75);
+    --VeryLightGray:hsl(0, 0%, 95%);
+
+}
+
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    background-color:var(--VeryLightGray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.products{
+   
+    display: flex;
+    width: 750px;
+}
+
+.product-one, .product-two, .product-three{
+    width:33.33%;
+    padding: 2.5rem;
+    position: relative;
+   
+    
+}
+
+.products img{
+    width: 50px;
+}
+
+.products h1{
+    font-family: 'Big Shoulders Display';
+    color: var(--VeryLightGray);
+    font-size: 2.2rem;
+}
+
+.products p{
+    color: var(--TransparentLight);
+    font-family: 'Lexend Deca';
+    font-size: 0.8rem;
+    line-height: 21px;
+    margin-bottom: 6.5rem;
+}
+
+
+
+.product-one{
+    background-color: var(--BrightOrange);
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.product-two{
+    background-color: var(--DarkCyan); 
+}
+
+.product-three{
+    background-color: var(--VeryDarkCyan);
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+button{
+    border: none;
+    border-radius: 20px;
+    border: 2px solid var(--TransparentLight);
+    color: var(--TransparentLight);
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'Lexend Deca';
+    font-size: 0.8rem;
+    padding: 0.8em 2em 0.8em 2em ;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2.5rem;
+    
+}
+
+.product-one button:hover{
+    background-color: white;
+    color: var(--BrightOrange);
+}
+
+.product-two button:hover{
+    background-color: white;
+    color: var(--DarkCyan);
+}
+
+.product-three button:hover{
+    background-color: white;
+    color: var(--VeryDarkCyan);
+}
+
+
+@media screen and (max-width: 750px) {
+
+   html{
+    font-size: 13px;
+   }
+
+   .products{
+    margin-left: 1rem;
+    margin-right: 1rem;
+   }
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 500px) {
+
+    html{
+     font-size: 10px;
+    }
+ 
+    .products{
+     margin-left: 1rem;
+     margin-right: 1rem;
+    }
+     
+ }
+
+@media screen and (max-width: 375px){
+    
+    .html{
+        font-size: 15px;
+    }
+
+    .products{
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+
+    .products .product-one, .product-two, .product-three{
+        width: 60%;
+    }
+
+    .products p{
+        margin-bottom: 2rem;
+    }
+
+    .product-one{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 8px;
+    }
+    .product-three{
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0px;
+    }
+
+    button{
+        position:static;
+    }
+    
+    
+}
+
